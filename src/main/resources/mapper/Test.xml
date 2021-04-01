@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xunnan.springboot.supingerp.mapper.ErpCangkuMapper">
+    <!-- statementType 声明指向的是什么类型，其中CALLABLE是执行存储过程和函数的-->
+    <select id="callSqlTest" statementType="CALLABLE">
+        {call a_stock_clztkc_bsyyb('sp_shop_stock_201812')}
+  </select>
+
+</mapper>

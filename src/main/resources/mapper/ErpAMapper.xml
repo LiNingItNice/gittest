@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xunnan.springboot.supingerp.mapper.ErpAMapper">
+
+    <select id="getTestData" resultType="com.xunnan.springboot.supingerp.entity.SpShopStock201812Copy2">
+        SELECT
+            id as id,
+            shop_code as shopCode,
+            goods_code as   goodsCode,
+            goods_color as goodsColor,
+            goods_size as goodsSize,
+            shop_date as shopDate,
+            shop_date_timeStamp as shopDateTimeStamp,
+            date_year as dateYear,
+            date_month as dateMonth,
+            date_day as dateDay,
+            date_week as dateWeek,
+            stock_num as stockNum,
+            stock_amount as stockAmount,
+            broken_code_amount as brokenCodeAmount,
+            broken_code_num as brokenCodeNum,
+            lifeTime_amount as lifeTimeAmount,
+            lifeTime_num as lifeTimeNum,
+            lifeTime_notBrokenCode_amount as lifeTimeNotBrokenCodeAmount,
+            lifeTime_notBrokenCode_num as lifeTimeNotBrokenCodeNum,
+            bargain_amount as bargainAmount,
+            bargain_num as bargainNum,
+            normal_amount as normalAmount,
+            normal_num as normalNum,
+            underWay_amount as underWayAmount,
+            underWay_num as underWayNum,
+            notBroken_code_amount as notBrokenCodeAmount,
+            notBroken_code_num as notBrokenCodeNum,
+            invalid_amount as invalidAmount,
+            invalid_num as invalidNum,
+            outLife_amount as outLifeAmount,
+            outLife_num as outLifeNum,
+            broken_code_flag as brokenCodeFlag,
+            life_cycle_flag as lifeCycleFlag,
+            normal_flag as normalFlag,
+            invalid_flag as invalidFlag,
+            inWareHouse_num as inWareHouseNum,
+            inWareHouse_amount as inWareHouseAmount
+        FROM sp_shop_stock201812_copy2 LIMIT #{index},#{size}
+    </select>
+<!--    <select id="getTestDataAll" resultType="com.xunnan.springboot.supingerp.entity.SpShopStock201812">-->
+<!--        SELECT-->
+<!--            id as id,-->
+<!--            shop_code as shopCode,-->
+<!--            goods_code as   goodsCode,-->
+<!--            goods_color as goodsColor,-->
+<!--            goods_size as goodsSize,-->
+<!--            shop_date as shopDate,-->
+<!--            shop_date_timeStamp as shopDateTimeStamp,-->
+<!--            date_year as dateYear,-->
+<!--            date_month as dateMonth,-->
+<!--            date_day as dateDay,-->
+<!--            date_week as dateWeek,-->
+<!--            stock_num as stockNum,-->
+<!--            stock_amount as stockAmount,-->
+<!--            broken_code_amount as brokenCodeAmount,-->
+<!--            broken_code_num as brokenCodeNum,-->
+<!--            lifeTime_amount as lifeTimeAmount,-->
+<!--            lifeTime_num as lifeTimeNum,-->
+<!--            lifeTime_notBrokenCode_amount as lifeTimeNotBrokenCodeAmount,-->
+<!--            lifeTime_notBrokenCode_num as lifeTimeNotBrokenCodeNum,-->
+<!--            bargain_amount as bargainAmount,-->
+<!--            bargain_num as bargainNum,-->
+<!--            normal_amount as normalAmount,-->
+<!--            normal_num as normalNum,-->
+<!--            underWay_amount as underWayAmount,-->
+<!--            underWay_num as underWayNum,-->
+<!--            notBroken_code_amount as notBrokenCodeAmount,-->
+<!--            notBroken_code_num as notBrokenCodeNum,-->
+<!--            invalid_amount as invalidAmount,-->
+<!--            invalid_num as invalidNum,-->
+<!--            outLife_amount as outLifeAmount,-->
+<!--            outLife_num as outLifeNum,-->
+<!--            broken_code_flag as brokenCodeFlag,-->
+<!--            life_cycle_flag as lifeCycleFlag,-->
+<!--            normal_flag as normalFlag,-->
+<!--            invalid_flag as invalidFlag,-->
+<!--            inWareHouse_num as inWareHouseNum,-->
+<!--            inWareHouse_amount as inWareHouseAmount-->
+<!--        FROM sp_shop_stock201812_copy2-->
+<!--    </select>-->
+</mapper>

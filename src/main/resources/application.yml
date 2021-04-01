@@ -1,0 +1,42 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://rm-wz9ijjaiq958zyylijo.mysql.rds.aliyuncs.com:3306/supin_data?useUnicode=true&useSSL=false&characterEncoding=utf8
+#    password: Supin@20201027
+#    username: root
+    url: jdbc:mysql://47.106.23.62:3306/mljz?useUnicode=true&useSSL=false&characterEncoding=utf8
+    username: root
+    password: 1qazXSW@#$
+#    url: jdbc:mysql://localhost:3307/spdata?useUnicode=true&useSSL=false&characterEncoding=utf8
+#    password: root
+#    username: root
+  jpa:
+    show-sql: true
+  main:
+    allow-bean-definition-overriding: true
+  activiti:
+    database-schema-update: true # 数据库表校验，没有activiti的25张表时创建表
+    db-history-used: true # activiti7默认不生成历史信息表，开启历史表
+    history-level: full # 记录历史等级
+    check-process-definitions: false # 校验流程文件，默认校验resources下的processes文件夹里的流程文件
+
+#logging:
+#  level:
+#    com.xunnan.springboot.supingerp.*: debug
+
+#登录页 配置
+fantj:
+  security:
+    browser:
+      loginPage: /demo-signIn.html
+      # 返回 类型设置（view 还是 json）
+      loginType: REDIRECT
+    #图形验证码配置
+    code:
+      image:
+        length: 6
+        width: 100
+        url: /user,/user/*
